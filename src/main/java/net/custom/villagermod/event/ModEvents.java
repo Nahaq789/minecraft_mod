@@ -29,7 +29,7 @@ public class ModEvents {
             ));
         }
 
-        if(event.getType() == VillagerProfession.CLERIC) {
+        if(event.getType() == VillagerProfession.FISHERMAN) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
