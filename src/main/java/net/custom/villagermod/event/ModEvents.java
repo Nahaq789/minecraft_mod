@@ -37,6 +37,25 @@ public class ModEvents {
                     new ItemStack(Items.STONE_BRICKS, 1),
                     5, 8, 0.02f
             ));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.DIRT, 1),
+                    new ItemStack(Items.WHITE_CONCRETE, 64),
+                    5, 8, 0.02f
+            ));
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.DIRT, 1),
+                    new ItemStack(Items.GRAY_CONCRETE, 64),
+                    5, 8, 0.02f
+            ));
+        }
+
+        if (event.getType() == VillagerProfession.TOOLSMITH) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.DIRT, 1),
+                    new ItemStack(Items.EMERALD_BLOCK, 1),
+                    5, 8, 0.02f
+            ));
         }
     }
 }
